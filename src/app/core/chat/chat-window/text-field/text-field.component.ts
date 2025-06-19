@@ -1,20 +1,24 @@
 import { Component, output, signal } from '@angular/core';
+import { ChatService } from '../../../../services/chat.service';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-text-field',
-  imports: [],
+  imports: [FormsModule],
   templateUrl: './text-field.component.html',
   styleUrl: './text-field.component.scss',
 })
 export class TextFieldComponent {
   message = signal('');
-  sendMessage = output<string>();
-
+  user = '';
+  constructor(private chatService: ChatService) {
+    this.chatService.startConnection();
+  }
   onSend() {
     const trimmed = this.message().trim();
-    if (trimmed) {
-      this.sendMessage.emit(trimmed);
+    if (trimmed && this.user) {
       this.message.set('');
+      this.chatService.sendMessage(this.user, trimmed);
     }
   }
   onKeyDown(event: KeyboardEvent) {

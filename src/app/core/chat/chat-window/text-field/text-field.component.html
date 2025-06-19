@@ -1,4 +1,5 @@
 <div class="chat-input">
+  <input type="text" [(ngModel)]="user" placeholder="Your name" />
   <textarea
     [value]="message()"
     (input)="message.set($any($event.target).value)"

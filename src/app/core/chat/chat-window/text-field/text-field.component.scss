@@ -17,6 +17,17 @@ textarea {
   overflow-y: auto;
 }
 
+input {
+  resize: none;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #000000;
+  border-radius: 20px;
+  outline: none;
+  font-size: 1rem;
+  max-height: 150px;
+  overflow-y: auto;
+}
+
 button {
   margin-left: 0.75rem;
   background-color: #007bff;

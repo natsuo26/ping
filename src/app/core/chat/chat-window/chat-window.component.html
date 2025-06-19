@@ -1,12 +1,10 @@
 <div class="chat-main-window">
   <div class="messages">
-    @for (message of messages(); track $index) {
-    <app-message-blob [message]="message"></app-message-blob>
+    @for (message of messages; track $index) {
+    <div>{{ message.user }}</div>
+    <app-message-blob [message]="message.message"></app-message-blob>
     }
   </div>
 
-  <app-text-field
-    (sendMessage)="handleSend($event)"
-    class="text-field"
-  ></app-text-field>
+  <app-text-field class="text-field"></app-text-field>
 </div>
