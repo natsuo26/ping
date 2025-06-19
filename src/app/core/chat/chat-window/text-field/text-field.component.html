@@ -1,0 +1,10 @@
+<div class="chat-input">
+  <textarea
+    [value]="message()"
+    (input)="message.set($any($event.target).value)"
+    (keydown)="onKeyDown($event)"
+    placeholder="Type your message..."
+    rows="1"
+  ></textarea>
+  <button (click)="onSend()">Send</button>
+</div>
