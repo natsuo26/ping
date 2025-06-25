@@ -12,3 +12,116 @@ body {
   font-weight: 400;
   font-style: normal;
 }
+
+$light-rosewater: #dc8a78;
+$light-flamingo: #dd7878;
+$light-pink: #ea76cb;
+$light-mauve: #8839ef;
+$light-red: #d20f39;
+$light-maroon: #e64553;
+$light-peach: #fe640b;
+$light-yellow: #df8e1d;
+$light-green: #40a02b;
+$light-teal: #179299;
+$light-sky: #04a5e5;
+$light-sapphire: #209fb5;
+$light-blue: #1e66f5;
+$light-lavender: #7287fd;
+$light-text-color-3: #4c4f69;
+$light-text-color-2: #5c5f77;
+$light-text-color-1: #6c6f85;
+$light-overlay-color-3: #7c7f93;
+$light-overlay-color-2: #8c8fa1;
+$light-overlay-color-1: #9ca0b0;
+$light-surface-color-3: #acb0be;
+$light-surface-color-2: #bcc0cc;
+$light-surface-color-1: #ccd0da;
+$light-background-color-3: #eff1f5;
+$light-background-color-2: #e6e9ef;
+$light-background-color-1: #dce0e8;
+
+// Define SCSS Variables for Dark Theme
+$dark-rosewater: #f5e0dc;
+$dark-flamingo: #f2cdcd;
+$dark-pink: #f5c2e7;
+$dark-mauve: #cba6f7;
+$dark-red: #f38ba8;
+$dark-maroon: #eba0ac;
+$dark-peach: #fab387;
+$dark-yellow: #f9e2af;
+$dark-green: #a6e3a1;
+$dark-teal: #94e2d5;
+$dark-sky: #89dceb;
+$dark-sapphire: #74c7ec;
+$dark-blue: #89b4fa;
+$dark-lavender: #b4befe;
+$dark-text-color-3: #cdd6f4;
+$dark-text-color-2: #bac2de;
+$dark-text-color-1: #a6adc8;
+$dark-overlay-color-3: #9399b2;
+$dark-overlay-color-2: #7f849c;
+$dark-overlay-color-1: #6c7086;
+$dark-surface-color-3: #585b70;
+$dark-surface-color-2: #45475a;
+$dark-surface-color-1: #313244;
+$dark-background-color-3: #1e1e2e;
+$dark-background-color-2: #181825;
+$dark-background-color-1: #11111b;
+
+:root {
+  --rosewater: #{$light-rosewater};
+  --flamingo: #{$light-flamingo};
+  --pink: #{$light-pink};
+  --mauve: #{$light-mauve};
+  --red: #{$light-red};
+  --maroon: #{$light-maroon};
+  --peach: #{$light-peach};
+  --yellow: #{$light-yellow};
+  --green: #{$light-green};
+  --teal: #{$light-teal};
+  --sky: #{$light-sky};
+  --sapphire: #{$light-sapphire};
+  --blue: #{$light-blue};
+  --lavender: #{$light-lavender};
+  --text-color-3: #{$light-text-color-3};
+  --text-color-2: #{$light-text-color-2};
+  --text-color-1: #{$light-text-color-1};
+  --overlay-color-3: #{$light-overlay-color-3};
+  --overlay-color-2: #{$light-overlay-color-2};
+  --overlay-color-1: #{$light-overlay-color-1};
+  --surface-color-3: #{$light-surface-color-3};
+  --surface-color-2: #{$light-surface-color-2};
+  --surface-color-1: #{$light-surface-color-1};
+  --background-color-3: #{$light-background-color-3};
+  --background-color-2: #{$light-background-color-2};
+  --background-color-1: #{$light-background-color-1};
+}
+
+body[data-theme="dark"] {
+  --rosewater: #{$dark-rosewater};
+  --flamingo: #{$dark-flamingo};
+  --pink: #{$dark-pink};
+  --mauve: #{$dark-mauve};
+  --red: #{$dark-red};
+  --maroon: #{$dark-maroon};
+  --peach: #{$dark-peach};
+  --yellow: #{$dark-yellow};
+  --green: #{$dark-green};
+  --teal: #{$dark-teal};
+  --sky: #{$dark-sky};
+  --sapphire: #{$dark-sapphire};
+  --blue: #{$dark-blue};
+  --lavender: #{$dark-lavender};
+  --text-color-3: #{$dark-text-color-3};
+  --text-color-2: #{$dark-text-color-2};
+  --text-color-1: #{$dark-text-color-1};
+  --overlay-color-3: #{$dark-overlay-color-3};
+  --overlay-color-2: #{$dark-overlay-color-2};
+  --overlay-color-1: #{$dark-overlay-color-1};
+  --surface-color-3: #{$dark-surface-color-3};
+  --surface-color-2: #{$dark-surface-color-2};
+  --surface-color-1: #{$dark-surface-color-1};
+  --background-color-3: #{$dark-background-color-3};
+  --background-color-2: #{$dark-background-color-2};
+  --background-color-1: #{$dark-background-color-1};
+}
