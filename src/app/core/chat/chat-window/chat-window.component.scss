@@ -9,4 +9,13 @@
   flex: 1;
   overflow-y: auto;
   padding: 1rem;
+  background-color: var(--background-color-1);
+}
+
+.text-field {
+  background-color: var(--background-color-1);
+}
+
+.user {
+  color: var(--text-color-3);
 }

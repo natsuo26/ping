@@ -7,8 +7,8 @@
   line-height: 1.4;
   word-wrap: break-word;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  background-color: #93d799;
+  background-color: var(--sapphire);
   align-self: flex-start;
   margin-right: auto;
-  color: #000;
+  color: var(--light-text-color-3);
 }

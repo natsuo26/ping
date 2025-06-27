@@ -1,7 +1,7 @@
 <div class="chat-main-window">
   <div class="messages">
     @for (message of messages; track $index) {
-    <div>{{ message.user }}</div>
+    <div class="user">{{ message.user }}</div>
     <app-message-blob [message]="message.message"></app-message-blob>
     }
   </div>
