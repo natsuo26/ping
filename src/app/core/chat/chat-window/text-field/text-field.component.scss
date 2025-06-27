@@ -15,8 +15,12 @@ textarea {
   font-size: 1rem;
   max-height: 150px;
   overflow-y: auto;
+  background-color: var(--overlay-color-1);
+  color: var(--text-color-3);
 }
-
+textarea::placeholder {
+  color: var(--text-color-1);
+}
 input {
   resize: none;
   padding: 0.5rem 0.75rem;
@@ -30,8 +34,8 @@ input {
 
 button {
   margin-left: 0.75rem;
-  background-color: #007bff;
-  color: white;
+  background-color: var(--blue);
+  color: black;
   border: none;
   padding: 0.5rem 1rem;
   border-radius: 20px;
@@ -40,5 +44,5 @@ button {
 }
 
 button:hover {
-  background-color: #0056b3;
+  background-color: var(--sky);
 }

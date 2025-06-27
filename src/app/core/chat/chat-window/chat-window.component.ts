@@ -21,4 +21,8 @@ export class ChatWindowComponent {
       }
     });
   }
+  shouldShowUser(index: number): boolean {
+    if (index === 0) return true;
+    return this.messages[index].user !== this.messages[index - 1].user;
+  }
 }
