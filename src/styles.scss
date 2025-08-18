@@ -1,4 +1,7 @@
 /* Global resets and fonts */
+
+@use "@angular/material" as mat;
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -124,4 +127,37 @@ body[data-theme="dark"] {
   --background-color-3: #{$dark-background-color-3};
   --background-color-2: #{$dark-background-color-2};
   --background-color-1: #{$dark-background-color-1};
+}
+
+// Create the theme configurations
+$light-theme: mat.define-theme(
+  (
+    color: (
+      theme-type: light,
+      primary: mat.$azure-palette,
+    ),
+  )
+);
+
+$dark-theme: mat.define-theme(
+  (
+    color: (
+      theme-type: dark,
+      primary: mat.$azure-palette,
+    ),
+  )
+);
+
+// Apply light theme by default
+html {
+  @include mat.all-component-themes($light-theme);
+  --mat-app-background-color: #ccd0da;
+  --mat-app-text-color: #4c4f69;
+}
+
+// Apply dark theme when body has darkMode class
+body.dark {
+  @include mat.all-component-themes($dark-theme);
+  --mat-app-background-color: #414559;
+  --mat-app-text-color: #c6d0f5;
 }
