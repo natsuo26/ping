@@ -3,12 +3,12 @@ import { TextFieldComponent } from './text-field/text-field.component';
 import { MessageBlobComponent } from './message-blob/message-blob.component';
 import { ChatService } from '../../../services/chat.service';
 import { take } from 'rxjs';
-import { CommonModule } from '@angular/common';
+
 import { messagePacket } from '../../models/chat.const';
 
 @Component({
   selector: 'app-chat-window',
-  imports: [TextFieldComponent, MessageBlobComponent, CommonModule],
+  imports: [TextFieldComponent, MessageBlobComponent],
   templateUrl: './chat-window.component.html',
   styleUrl: './chat-window.component.scss',
 })
