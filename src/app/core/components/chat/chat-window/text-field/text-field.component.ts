@@ -1,5 +1,5 @@
 import { Component, signal } from '@angular/core';
-import { ChatService } from '../../../../services/chat.service';
+import { ChatService } from '../../../../../services/chat.service';
 import { FormsModule } from '@angular/forms';
 
 @Component({

@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { ChatService } from '../../services/chat.service';
+import { ChatService } from '../../../services/chat.service';
 import { FormsModule } from '@angular/forms';
+import { AuthService } from '../../services/auth/auth.service';
+import { User } from '../../models/auth';
 
 @Component({
   selector: 'app-join-room',
@@ -12,8 +14,16 @@ import { FormsModule } from '@angular/forms';
 export class JoinRoomComponent {
   userName = '';
   roomName = '';
-  constructor(private router: Router, private chatService: ChatService) {
+  constructor(
+    private router: Router,
+    private chatService: ChatService,
+    private authService: AuthService
+  ) {
     this.chatService.startConnection();
+  }
+
+  ngOnInit(): void {
+    this.userName = this.authService.getUserName();
   }
 
   public onJoinClicked(): void {

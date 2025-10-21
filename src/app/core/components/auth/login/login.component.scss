@@ -1,0 +1,97 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  min-width: 100vw;
+  background-color: var(--background-color-1);
+}
+
+.Login-container {
+  background: var(--surface-color-2);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  max-width: 400px;
+
+  h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--text-color-3);
+  }
+  h3 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--text-color-3);
+    a {
+      color: var(--blue);
+      text-decoration: none;
+      font-weight: 600;
+      &:hover {
+        color: var(--sky);
+        transition: color 0.3s;
+      }
+    }
+  }
+
+  .form-field {
+    margin-bottom: 1.5rem;
+
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+      color: var(--text-color-3);
+    }
+
+    input {
+      width: 100%;
+      padding: 0.75rem;
+      border: 0.1px solid var(--background-color-3);
+      border-radius: 8px;
+      font-size: 1rem;
+      transition: border-color 0.3s;
+
+      &:focus {
+        border-color: var(--sky);
+        outline: none;
+      }
+
+      &.error {
+        border-color: #dc3545;
+      }
+    }
+
+    .error-message {
+      margin-top: 0.25rem;
+
+      small {
+        color: #dc3545;
+        font-size: 0.875rem;
+      }
+    }
+  }
+
+  button {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--blue);
+    color: var(--text-color-3);
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.1);
+
+    &:hover:not(:disabled) {
+      background-color: var(--sky);
+    }
+
+    &:disabled {
+      background-color: #6c757d;
+      cursor: not-allowed;
+    }
+  }
+}

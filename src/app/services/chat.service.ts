@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import * as signalR from '@microsoft/signalr';
 import { BehaviorSubject } from 'rxjs';
 import { messagePacket } from '../core/models/chat.const';
+import { AuthService } from '../core/services/auth/auth.service';
 
 @Injectable({
   providedIn: 'root',
@@ -12,11 +13,15 @@ export class ChatService {
   private userName = '';
   private roomName = '';
   message$ = this.messageSource.asObservable();
+  constructor(private readonly authService: AuthService) {}
 
   // starts the signalR connection
   startConnection(): void {
+    const token = this.authService.getAccessToken();
     this.hubConnection = new signalR.HubConnectionBuilder()
-      .withUrl('http://localhost:5019/chathub')
+      .withUrl('http://localhost:5254/chathub', {
+        accessTokenFactory: () => token,
+      })
       .withAutomaticReconnect()
       .build(); // replace url with your web api url running signalR socket
 

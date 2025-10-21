@@ -1,10 +1,10 @@
 import { Component, input } from '@angular/core';
 import { TextFieldComponent } from './text-field/text-field.component';
 import { MessageBlobComponent } from './message-blob/message-blob.component';
-import { ChatService } from '../../../services/chat.service';
+import { ChatService } from '../../../../services/chat.service';
 import { take } from 'rxjs';
 
-import { messagePacket } from '../../models/chat.const';
+import { messagePacket } from '../../../models/chat.const';
 
 @Component({
   selector: 'app-chat-window',
